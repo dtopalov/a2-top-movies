@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { MovieModel } from './';
 
 @Injectable()
 export class MoviesService {
     constructor(private http: Http) { }
 
-    getMovies() {
-        return this.http.get('../data/movies.json')
+    getMovie(imdbId: string): Observable<MovieModel> {
+        return this.http.get('http://www.omdbapi.com/?i=' + imdbId)
             .map((response: Response) => response.json());
     }
 }
