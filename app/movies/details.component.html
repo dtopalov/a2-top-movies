@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2"><h1>{{ movie?.Title }}</h1></div>
   <div class="col-md-2 col-md-offset-1">
-    <img src="{{movie?.Poster}}" class="img-responsive" alt="Poster">
+    <img src="{{movie?.Poster === 'N/A' ? 'http://ia.media-imdb.com/images/M/MV5BMjAzNDEwMzk3OV5BMl5BanBnXkFtZTcwOTk4OTM5Ng@@._V1_SX300.jpg': movie?.Poster }}" class="img-responsive" alt="Poster">
   </div>
   <div class="col-md-8">
       <div><h4>Year: {{movie?.Year}}</h4></div>

@@ -1,1 +1,14 @@
-<h1>Top ten</h1>
+<div class="container">
+    <h1>Top ten:</h1>
+    <br />
+    <table class="table">
+        <thead>
+            <th>Title</th>
+            <th>Year</th>
+            <th>ImdbRating</th>
+        </thead>
+        <tbody>
+            <tr mvdb-movie-short *ngFor="let movie of topTen" [movie]="movie"></tr>
+        </tbody>
+    </table>
+</div>

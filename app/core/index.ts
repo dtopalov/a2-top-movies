@@ -6,3 +6,6 @@ export * from './pager.component';
 export * from './movies-paging.pipe';
 export * from './app-routing.module';
 export * from './header.component';
+export * from './star.component';
+export * from './stars.component';
+export * from './footer.component';

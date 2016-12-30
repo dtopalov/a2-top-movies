@@ -10,7 +10,10 @@ import {
     MoviesSortingPipe,
     MoviesPagingPipe,
     PagerComponent,
-    HeaderComponent
+    HeaderComponent,
+    AcStars,
+    AcStar,
+    FooterComponent
   } from './core/';
 
 import { AppComponent } from './app.component';
@@ -32,7 +35,10 @@ import {
     PagerComponent,
     HeaderComponent,
     DetailsComponent,
-    TopTenComponent
+    FooterComponent,
+    TopTenComponent,
+    AcStars,
+    AcStar
   ],
   imports: [
     BrowserModule,
