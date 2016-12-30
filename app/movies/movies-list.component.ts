@@ -34,13 +34,13 @@ export class MoviesListComponent implements OnInit {
         this.sortingProperties = ['Title', 'Rating', 'Year'];
         this.sortingProperty = 'Rating';
         this.direction = 'desc';
-        this.movies = [];
-        for (let i = 1; i <= 100; i++) {
-            setTimeout(() => {
-                this.leech(this.padLeft(i, 7));
-            }, 500);
-        }
-        this.numberOfPages = 1;
+        this.movies = [].concat(this.moviesService.getMovies(100));
+        // for (let i = 1; i <= 100; i++) {
+        //     setTimeout(() => {
+        //         this.leech(this.padLeft(i, 7));
+        //     }, 500);
+        // }
+        this.numberOfPages = 10;
     }
 
     leech(id: string) {
